@@ -57,8 +57,7 @@ function Index() {
   const [childName, setChildName] = useState("");
   const [childAge, setChildAge] = useState("");
   const [mobile, setMobile] = useState("");
-  const currentBatch = batches.find((batch) => batch.id === selectedBatch) ?? batches[0];
-  const [date, setDate] = useState(currentBatch.date);
+  const [date, setDate] = useState("2026-10-02");
   const availableBatches = batches.filter((batch) => batch.date === date);
   const chooseBatch = (id: string) => {
     const batch = batches.find((item) => item.id === id);

@@ -147,9 +147,12 @@ body { margin: 0; font-family: var(--font-sans); background: var(--background); 
 }
 @media(max-width: 560px) {
   .section-wrap { width: min(100% - 36px, 1180px); }
-  .hero { min-height: 710px; }
-  .hero-content { padding-block: 34px; }
-  .hero-title { font-size: 39px; }
+  .hero { min-height: 620px; }
+  .hero-content { padding-block: 22px; }
+  .hero-title { font-size: 36px; margin-top: 16px; margin-bottom: 14px; }
+  .hero-copy { line-height: 1.5; }
+  .hero-meta { margin-top: 18px; }
+  .hero-content > .flex:last-child { margin-top: 22px; }
   .hero-meta { gap: 10px 16px; }
   .experience-grid, .step-list, .form-grid { grid-template-columns: 1fr; }
   .experience-grid { gap: 10px; }
