@@ -1,10 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { ArrowRight, CalendarDays, Check, Clock3, FlaskConical, Gamepad2, MapPin, Menu, MessageCircle, Bot, Cpu, Trophy, Sparkles, Phone, ChevronRight, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/camp-hands-on.jpg";
+import rocketImage from "@/assets/camp-rocket-launch.jpg";
+import foamImage from "@/assets/camp-foam-experiment.jpg";
 import aitraLogo from "@/assets/aitra-logo.png.asset.json";
 import canopyLogo from "@/assets/canopy-logo.jpeg.asset.json";
+
+const heroSlides = [
+  { src: heroImage, alt: "Children's hands assembling an educational robot with circuits and sensors" },
+  { src: rocketImage, alt: "Kids cheering as their model rocket launches at science camp" },
+  { src: foamImage, alt: "Kids in safety goggles laughing as a chemistry foam experiment erupts" },
+];
 
 const batches = [
   { id: "oct2-morning", date: "2026-10-02", label: "October 2, 2026", name: "Morning Batch", time: "10:00 AM – 1:00 PM" },
@@ -53,6 +61,11 @@ export const Route = createFileRoute("/")({
 function Index() {
   const [selectedBatch, setSelectedBatch] = useState("oct2-morning");
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const timer = window.setInterval(() => setSlide((current) => (current + 1) % heroSlides.length), 5000);
+    return () => window.clearInterval(timer);
+  }, []);
   const [parentName, setParentName] = useState("");
   const [childName, setChildName] = useState("");
   const [childAge, setChildAge] = useState("");
