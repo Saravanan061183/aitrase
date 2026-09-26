@@ -134,6 +134,7 @@ body { margin: 0; font-family: var(--font-sans); background: var(--background); 
   .hero { min-height: 650px; align-items: flex-end; }
   .hero-image { object-position: 67% center; }
   .hero::after { background: linear-gradient(0deg, oklch(0.14 0.06 258 / .98) 0%, oklch(0.14 0.06 258 / .85) 50%, oklch(0.14 0.06 258 / .15) 100%); }
+  .hero-dots { bottom: 18px; right: 20px; gap: 8px; }
   .hero-content { padding-block: 50px; }
   .hero-title { font-size: clamp(38px, 9vw, 60px); }
   .hero-copy { font-size: 16px; }
