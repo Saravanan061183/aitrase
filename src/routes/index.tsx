@@ -15,9 +15,8 @@ const heroSlides = [
 ];
 
 const batches = [
-  { id: "oct2-morning", date: "2026-10-02", label: "October 2, 2026", name: "Morning Batch", time: "10:00 AM – 1:00 PM" },
-  { id: "oct4-morning", date: "2026-10-04", label: "October 4, 2026", name: "Morning Batch", time: "10:00 AM – 1:00 PM" },
-  { id: "oct4-evening", date: "2026-10-04", label: "October 4, 2026", name: "Evening Batch", time: "4:00 PM – 7:00 PM" },
+  { id: "oct18-morning", date: "2026-10-18", label: "October 18, 2026", name: "Morning Batch", time: "10:00 AM – 1:00 PM" },
+  { id: "oct18-evening", date: "2026-10-18", label: "October 18, 2026", name: "Evening Batch", time: "4:00 PM – 7:00 PM" },
 ];
 const experiences = [
   { icon: FlaskConical, title: "10 Hands-on Science Projects", description: "Explore science through practical projects that encourage children to build, test and discover." },
